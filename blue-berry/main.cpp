@@ -4,7 +4,7 @@
 int main()
 {
     struct sockaddr_in sk;
-    BlueBerry *exchanger = new BlueBerry(sk, "blueberrys.ddns.net", "80", "/a", "");
+    BlueBerry *exchanger = new BlueBerry(sk, "blueberrys.ddns.net", "80", "/example.txt", "");
     if (!exchanger->establishConnection())
     {
         std::cerr << "Failed to establish communication. Quitting..\n";

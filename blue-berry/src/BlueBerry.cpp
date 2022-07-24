@@ -33,7 +33,7 @@ bool BlueBerry::establishConnection()
 
 std::string BlueBerry::performGETReq()
 {
-    std::string request = "GET " + this->getResource() + this->getQueryParams() + " HTTP/1.1\r\nHost: kali:Ciao.1234@" + this->getHost() + "\r\nConnection: close\r\n\r\n";
+    std::string request = "GET " + this->getResource() + this->getQueryParams() + " HTTP/1.1\r\nHost: " + this->getHost() + "\r\nConnection: close\r\n\r\n";
 
     if (send(this->getSocketDescriptor(), request.c_str(), request.size(), 0) < 0)
     {
